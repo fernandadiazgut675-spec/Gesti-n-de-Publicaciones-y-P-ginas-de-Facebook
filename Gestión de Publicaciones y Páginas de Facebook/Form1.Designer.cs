@@ -157,7 +157,7 @@
             // 
             // btnagregar
             // 
-            this.btnagregar.Location = new System.Drawing.Point(13, 324);
+            this.btnagregar.Location = new System.Drawing.Point(12, 354);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(231, 35);
             this.btnagregar.TabIndex = 13;
@@ -167,13 +167,10 @@
             // 
             // btnmostrar
             // 
-            this.btnmostrar.Location = new System.Drawing.Point(15, 380);
+            this.btnmostrar.Location = new System.Drawing.Point(0, 0);
             this.btnmostrar.Name = "btnmostrar";
-            this.btnmostrar.Size = new System.Drawing.Size(231, 35);
-            this.btnmostrar.TabIndex = 14;
-            this.btnmostrar.Text = "MOSTRAR ";
-            this.btnmostrar.UseVisualStyleBackColor = true;
-            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
+            this.btnmostrar.Size = new System.Drawing.Size(75, 23);
+            this.btnmostrar.TabIndex = 18;
             // 
             // btneliminar
             // 

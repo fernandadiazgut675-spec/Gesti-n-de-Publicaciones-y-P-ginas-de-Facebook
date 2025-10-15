@@ -11,7 +11,7 @@ namespace Gestión_de_Publicaciones_y_Páginas_de_Facebook
     {
         List<Usuarios> usuarios = new List<Usuarios>();
 
-        public bool Agregar(string usuario)
+        public bool Agregar(string nombre, string usuario, string seguidores, string pagina, string contenido, string like)
         {
             try
             {
@@ -19,7 +19,8 @@ namespace Gestión_de_Publicaciones_y_Páginas_de_Facebook
                 {
                     return false; // Usuario ya existe
                 }
-                usuarios.Add(new Usuarios(usuario));
+                usuarios.Add(new Usuarios(nombre, usuario, seguidores,pagina,  contenido, like));
+
                 return true;
             }
             catch (Exception)
@@ -51,18 +52,18 @@ namespace Gestión_de_Publicaciones_y_Páginas_de_Facebook
             return usuarios;
         }
 
-        public bool Actualizar(string usuarioAntiguo, string usuarioNuevo)
+        public bool Actualizar(string nombre, string usuario, string seguidores, string pagina, string contenido, string like)
         {
             try
             {
-                var usuarioAActualizar = usuarios.FirstOrDefault(u => u.Usuario.Equals(usuarioAntiguo, StringComparison.OrdinalIgnoreCase));
+                var usuarioAActualizar = usuarios.FirstOrDefault(u => u.Usuario.Equals(usuario, StringComparison.OrdinalIgnoreCase));
                 if (usuarioAActualizar != null)
                 {
-                    if (usuarios.Any(u => u.Usuario.Equals(usuarioNuevo, StringComparison.OrdinalIgnoreCase)))
+                    if (usuarios.Any(u => u.Usuario.Equals(usuario, StringComparison.OrdinalIgnoreCase)))
                     {
                         return false; // El nuevo nombre de usuario ya existe
                     }
-                    usuarioAActualizar.Usuario = usuarioNuevo;
+                    usuarioAActualizar.Usuario = usuario;
                     return true;
                 }
                 return false; // Usuario no encontrado

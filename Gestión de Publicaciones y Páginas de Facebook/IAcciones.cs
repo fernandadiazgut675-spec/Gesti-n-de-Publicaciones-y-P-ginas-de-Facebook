@@ -11,9 +11,9 @@ namespace Gestión_de_Publicaciones_y_Páginas_de_Facebook
         List<Usuarios> Mostrar();
 
        
-          bool Agregar(string usuario);
+          bool Agregar(string nombre, string usuario, string seguidores, string pagina, string contenido, string like);
          bool Eliminar(string usuario);
-            bool Actualizar(string usuarioAntiguo, string usuarioNuevo);
+            bool Actualizar(string nombre, string usuario, string seguidores, string pagina, string contenido, string like);
 
         bool ExportarAExcel(string ruta);
 
